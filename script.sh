@@ -20,7 +20,7 @@ function notifyFileChange {
 function renderPdf {
   path=$1
   export result_filename=${path%.*}.pdf 
-  pandoc $path -o ${result_filename}
+  pandoc -s -f markdown -t html -c `pwd`/style.css $path | tee /dev/tty | wkhtmltopdf - ${result_filename} >/dev/null
 }
 
 export -f refreshPreview

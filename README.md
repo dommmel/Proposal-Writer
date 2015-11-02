@@ -2,7 +2,7 @@
 
 * fswatch
 * Tex
-* pandoc
+* wkhtmltopdf
 
 ## Usage
 
